@@ -2,6 +2,28 @@
 
 A GNOME Shell 50 extension that adds music controls to the top bar and Quick Settings. It supports MPRIS players and uses CAVA to display an audio spectrum.
 
+## Installation
+
+Install the extension with one command (requires `curl`):
+
+```bash
+bundle_dir=$(mktemp -d) && curl -fL 'https://github.com/Glebsolopdf/Melody-Island/raw/refs/heads/main/by@substitute.me.shell-extension.zip' -o "$bundle_dir/by@substitute.me.shell-extension.zip" && gnome-extensions install --force "$bundle_dir/by@substitute.me.shell-extension.zip" && gnome-extensions enable 'by@substitute.me'
+```
+
+If GNOME Shell has not detected the extension yet, log out and back in, then run `gnome-extensions enable 'by@substitute.me'`. Updating an already loaded extension on Wayland may also require logging out and back in.
+
+To install from a local checkout, run `./install.sh` and enable the extension using the command above.
+
+Start an MPRIS-compatible player to see the widget. By default, it is hidden when no player is running.
+
+Open the extension settings from the **Extensions** application or run:
+
+```bash
+gnome-extensions prefs 'by@substitute.me'
+```
+
+The preferences contain separate sections for the top bar and Quick Settings. On Wayland, updating the extension's JavaScript may require logging out and back in before GNOME Shell loads the changes.
+
 ## Screenshots
 
 **Top bar**
@@ -34,28 +56,6 @@ On Ubuntu, install CAVA and the schema compiler with:
 sudo apt update
 sudo apt install cava libglib2.0-bin
 ```
-
-## Installation
-
-Install the extension with one command (requires `curl`):
-
-```bash
-bundle_dir=$(mktemp -d) && curl -fL 'https://github.com/Glebsolopdf/Melody-Island/raw/refs/heads/main/by@substitute.me.shell-extension.zip' -o "$bundle_dir/by@substitute.me.shell-extension.zip" && gnome-extensions install --force "$bundle_dir/by@substitute.me.shell-extension.zip" && gnome-extensions enable 'by@substitute.me'
-```
-
-If GNOME Shell has not detected the extension yet, log out and back in, then run `gnome-extensions enable 'by@substitute.me'`. Updating an already loaded extension on Wayland may also require logging out and back in.
-
-To install from a local checkout, run `./install.sh` and enable the extension using the command above.
-
-Start an MPRIS-compatible player to see the widget. By default, it is hidden when no player is running.
-
-Open the extension settings from the **Extensions** application or run:
-
-```bash
-gnome-extensions prefs 'by@substitute.me'
-```
-
-The preferences contain separate sections for the top bar and Quick Settings. On Wayland, updating the extension's JavaScript may require logging out and back in before GNOME Shell loads the changes.
 
 ## Troubleshooting
 
