@@ -1,0 +1,11 @@
+{
+  "uuid": "by@substitute.me",
+  "name": "Melody Island",
+  "description": "MPRIS music controls and a CAVA spectrum in the top panel",
+  "shell-version": [
+    "50"
+  ],
+  "settings-schema": "org.gnome.shell.extensions.melodybar",
+  "version": 1,
+  "creator": "substituteme"
+}

@@ -1,0 +1,39 @@
+/* Compact panel control; inherit the current Shell theme's foreground. */
+#panel .panel-button.melody-panel { -natural-hpadding: 4px; -minimum-hpadding: 4px; }
+.melody-panel-row { spacing: 6px; padding: 0 6px; border-radius: 14px; }
+.melody-spectrum { spacing: 2px; height: 20px; }
+.melody-bar { background-color: #dedee2; border-radius: 3px; }
+.melody-content { spacing: 8px; padding: 8px 10px 6px; }
+.melody-header { spacing: 14px; padding-bottom: 8px; }
+.melody-cover { border-radius: 12px; background-color: rgba(128,128,128,0.16); background-size: cover; }
+.melody-cover-icon { icon-size: 30px; color: rgba(160,160,160,0.75); }
+.melody-labels { spacing: 5px; }
+.melody-track { font-weight: 700; font-size: 1.08em; }
+.melody-artist { color: #aaa; font-size: 0.92em; }
+.melody-times, .melody-message { color: #999; font-size: 0.82em; }
+.melody-controls { spacing: 15px; padding-top: 2px; }
+.melody-control { border-radius: 999px; padding: 9px; }
+.melody-control:hover { background-color: rgba(128,128,128,0.18); }
+.melody-play { background-color: rgba(128,128,128,0.16); padding: 11px; }
+.melody-control:insensitive { opacity: 100; }
+
+/* Horizontal player with a restrained spectrum backdrop. */
+.melody-menu-item { padding: 0; }
+.melody-content { spacing: 16px; padding: 16px; }
+.melody-details { spacing: 4px; }
+.melody-top { spacing: 10px; }
+.melody-labels { spacing: 4px; }
+.melody-controls { spacing: 3px; padding: 0; }
+.melody-control { padding: 7px; }
+.melody-play { padding: 9px; }
+.melody-wave { border-radius: 16px; }
+
+.melody-popup { padding: 0; }
+
+/* Keep playback times readable over the animated spectrum. */
+.melody-time { color: #fff; background-color: rgba(16,16,20,0.78); border-radius: 5px; padding: 2px 5px; font-weight: 600; }
+
+.melody-quick-card { background-color: rgba(128,128,128,0.15); border-radius: 18px; }
+.melody-player-choice { border-radius: 8px; padding: 3px 6px; color: #aaa; }
+.melody-player-choice:hover { background-color: rgba(128,128,128,0.2); }
+.melody-player-choice-label { font-size: 0.85em; }
