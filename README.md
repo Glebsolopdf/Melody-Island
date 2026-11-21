@@ -37,17 +37,15 @@ sudo apt install cava libglib2.0-bin
 
 ## Installation
 
-Download the repository from GitHub using **Code → Download ZIP** and extract it, or clone it using the URL shown under **Code**. Open a terminal in the resulting directory and run:
+Install the extension with one command (requires `curl`):
 
 ```bash
-./install.sh
+bundle_dir=$(mktemp -d) && curl -fL 'https://github.com/Glebsolopdf/Melody-Island/raw/refs/heads/main/by@substitute.me.shell-extension.zip' -o "$bundle_dir/by@substitute.me.shell-extension.zip" && gnome-extensions install --force "$bundle_dir/by@substitute.me.shell-extension.zip" && gnome-extensions enable 'by@substitute.me'
 ```
 
-The script installs the extension for the current user and compiles its settings schema. If GNOME Shell does not detect the extension immediately, log out and back in. Then enable it:
+If GNOME Shell has not detected the extension yet, log out and back in, then run `gnome-extensions enable 'by@substitute.me'`. Updating an already loaded extension on Wayland may also require logging out and back in.
 
-```bash
-gnome-extensions enable 'by@substitute.me'
-```
+To install from a local checkout, run `./install.sh` and enable the extension using the command above.
 
 Start an MPRIS-compatible player to see the widget. By default, it is hidden when no player is running.
 
