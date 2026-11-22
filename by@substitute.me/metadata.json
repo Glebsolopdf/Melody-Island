@@ -6,6 +6,7 @@
     "50"
   ],
   "settings-schema": "org.gnome.shell.extensions.melodybar",
+  "gettext-domain": "by@substitute.me",
   "version": 1,
   "creator": "substituteme"
 }

@@ -4,13 +4,23 @@ root=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
 uuid=by@substitute.me
 source_dir="$root/$uuid"
 dest="${XDG_DATA_HOME:-$HOME/.local/share}/gnome-shell/extensions/$uuid"
+if ! command -v msgfmt >/dev/null; then
+    printf 'Installing from source requires msgfmt from GNU gettext.\n' >&2
+    exit 1
+fi
 mkdir -p "$dest"
 cp -R "$source_dir/." "$dest/"
 glib-compile-schemas --strict "$dest/schemas"
+for catalog in "$root"/po/*.po; do
+    language=${catalog##*/}
+    messages="$dest/locale/${language%.po}/LC_MESSAGES"
+    mkdir -p "$messages"
+    msgfmt --check-format -o "$messages/$uuid.mo" "$catalog"
+done
 # Remove only unchanged files managed by releases before src/services existed.
 for module in mpris.js visualizer.js; do
     legacy="$dest/$module"
-    if [ -f "$legacy" ] && cmp -s "$legacy" "$source_dir/src/services/$module"; then
+    if [ -f "$legacy" ] && cmp -s "$legacy" "$source_dir/services/$module"; then
         unlink "$legacy"
     fi
 done

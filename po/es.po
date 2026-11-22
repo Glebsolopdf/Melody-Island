@@ -1,0 +1,48 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Melody Island\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. %s is a playback timestamp such as 0:48.
+#, javascript-format
+msgid "Lyrics start at %s"
+msgstr "La letra empieza en %s"
+
+msgid "Lyrics"
+msgstr "Letras"
+
+msgid "Appearance"
+msgstr "Apariencia"
+
+msgid "Show in the top bar player"
+msgstr "Mostrar en el reproductor de la barra superior"
+
+msgid "Show in Quick Settings"
+msgstr "Mostrar en los ajustes rápidos"
+
+msgid "Show when lyrics start"
+msgstr "Mostrar cuándo empieza la letra"
+
+msgid "Scroll long lines"
+msgstr "Desplazar las líneas largas"
+
+msgid "Background opacity (%)"
+msgstr "Opacidad del fondo (%)"
+
+msgid "Lyrics API"
+msgstr "API de letras"
+
+msgid "Source for synchronized lyrics"
+msgstr "Fuente de letras sincronizadas"
+
+msgid "API documentation"
+msgstr "Documentación de la API"
+
+msgid "Enable lyrics"
+msgstr "Activar las letras"
+
+msgid "Disabling lyrics stops requests to LRCLIB"
+msgstr "Al desactivar las letras se detienen las solicitudes a LRCLIB"

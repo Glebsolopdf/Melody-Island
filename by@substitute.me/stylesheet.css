@@ -30,10 +30,13 @@
 
 .melody-popup { padding: 0; }
 
-/* Keep playback times readable over the animated spectrum. */
+/* Keep text readable over the animated spectrum. */
 .melody-time { color: #fff; background-color: rgba(16,16,20,0.78); border-radius: 5px; padding: 2px 5px; font-weight: 600; }
 
 .melody-quick-card { background-color: rgba(128,128,128,0.15); border-radius: 18px; }
 .melody-player-choice { border-radius: 8px; padding: 3px 6px; color: #aaa; }
 .melody-player-choice:hover { background-color: rgba(128,128,128,0.2); }
 .melody-player-choice-label { font-size: 0.85em; }
+.melody-lyrics { padding: 0 16px 6px; }
+.melody-lyrics-backdrop { color: #fff; background-color: rgba(12,12,16,0.52); border-radius: 5px; padding: 4px 9px; }
+.melody-lyrics-line { font-weight: 600; }
